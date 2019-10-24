@@ -1,13 +1,13 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin-top: 7vh;
     background-image: linear-gradient(to right, red, orange)
 }
 
-h1{
+h1 {
     display: block;
     margin: auto;
     text-align: center;
@@ -21,26 +21,32 @@ h1{
     border-style: solid 10px;
     border-color: white;
 }
-h2, h3{
-   
+
+h2,
+h3 {
+
     font-family: 'Orbitron';
     display: block;
 }
-h4{
+
+h4 {
     font-family: 'Orbitron';
     text-align: center;
     font-size: 50px;
     text-decoration: underline;
+    color: yellow;
 }
 
 
-.diceImage{
+.diceImage {
     display: block;
     margin: auto;
     padding: 15vh;
     border-style: solid;
 }
-.button, .newGame{
+
+.button,
+.newGame {
     font-size: 150%;
     font-family: Arial, Helvetica, sans-serif;
     display: block;
@@ -52,16 +58,19 @@ h4{
     padding: 1vh;
     padding-top: 2vh;
 }
-.player1, .player2{
+
+.player1,
+.player2 {
     /* background-color: black; */
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 8vh;
     padding-right: 8vh;
 }
-ul{
+
+ul {
     font-family: 'Orbitron';
     list-style-type: none;
 }
@@ -72,13 +81,14 @@ ul{
     justify-content: center;
     border-style: solid;
     display: block;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 10vh; 
-    
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10vh;
+    background-color: black;
 }
 
 li {
     text-align: center;
     padding-bottom: 2vh;
+    color: yellow;
 }
