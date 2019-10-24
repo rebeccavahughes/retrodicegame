@@ -26,6 +26,12 @@ h2, h3{
     font-family: 'Orbitron';
     display: block;
 }
+h4{
+    font-family: 'Orbitron';
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
 
 
 .diceImage{
@@ -54,6 +60,25 @@ h2, h3{
     justify-content: space-between;
     padding-left: 8vh;
     padding-right: 8vh;
+}
+ul{
+    font-family: 'Orbitron';
+    list-style-type: none;
+}
 
+.rules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: solid;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10vh; 
     
+}
+
+li {
+    text-align: center;
+    padding-bottom: 2vh;
 }

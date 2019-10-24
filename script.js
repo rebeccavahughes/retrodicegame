@@ -7,12 +7,16 @@ let turn = "P1"
 const diceImage = document.querySelector(".diceImage");
 const newGame = document.querySelector(".newGame");
 const rollButton = document.querySelector(".button");
+const rules = document.querySelector(".rules")
 
 rollButton.style.display = "none";
+diceImage.style.display = "none";
 
 newGameFunction = () => {
     gameStarted = true;
     newGame.style.display = "none"
+    diceImage.style.display = "block"
+    rules.style.display = "none"
     rollButton.style.display = "block"
     document.querySelector(".player1Info").textContent = "Player One:";
     document.querySelector(".player2Info").textContent = "Player Two:";
@@ -36,7 +40,7 @@ switch (true){
     case randomRoll != 1 && turn == "P1":
         p1Score += randomRoll
         turn = "P2"
-        document.querySelector(".player1Score").textContent = `Your score is: ${p1Score}`
+        document.querySelector(".player1Score").textContent = `Your Score is: ${p1Score}`
         checkForWin()
         break;
     case randomRoll != 1 && turn == "P2":
@@ -75,3 +79,4 @@ const gameOver = () =>{
     rollButton.style.display = "none";
     newGame.style.display = "block"
 }
+
