@@ -4,10 +4,13 @@ let gameStarted = false;
 let turn = "P1"
 
 
+
 const diceImage = document.querySelector(".diceImage");
 const newGame = document.querySelector(".newGame");
 const rollButton = document.querySelector(".button");
 const rules = document.querySelector(".rules")
+let p1wins = document.querySelector(".p1wins")
+let p2wins = document.querySelector(".p2wins")
 
 rollButton.style.display = "none";
 diceImage.style.display = "none";
@@ -62,12 +65,18 @@ const checkForWin = () => {
     if (p1Score > 20) {
         document.querySelector(".player1Info").textContent = "Player 1 - Winner Winner Chicken Dinner!! ";
         document.querySelector(".player2Info").textContent = "Player 2 - Loser Loser get to the boozer :(";
+        p1wins++
+        document.querySelector(".totalp1wins").textContent = `P1 Total Wins: ${p1wins}`
+        document.querySelector(".totalp2wins").textContent = `P2 Total Wins: ${p2wins}`
         gameOver()
 
     }
     if (p2Score > 20) {
         document.querySelector(".player1Info").textContent = "Player 1 - Loser Loser get to the boozer :(";
         document.querySelector(".player2Info").textContent = "Player 2 - Winner Winner Chicken Dinner!! ";
+        document.querySelector(".totalp1wins").textContent = `P1 Total Wins: ${p1wins}`
+        document.querySelector(".totalp2wins").textContent = `P2 Total Wins: ${p2wins}`
+        p2wins++
         gameOver()
 
     }
@@ -76,7 +85,6 @@ const checkForWin = () => {
 const gameOver = () => {
     p1Score = 0;
     p2Score = 0;
-    turn = "P1"
     rollButton.style.display = "none";
     newGame.style.display = "block"
 }
